@@ -1,0 +1,36 @@
+# dependencies
+node_modules
+
+# environment variables
+.env
+.env.*
+!.env.example
+
+# logs
+logs
+*.log
+
+# build
+dist
+build
+
+# uploads / arquivos enviados
+uploads/
+imagensBackend/
+
+# git folder (caso exista no zip)
+.git
+
+# editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# OS
+.DS_Store
+Thumbs.db
+
+# cache
+.vite
+.cache
+coverage

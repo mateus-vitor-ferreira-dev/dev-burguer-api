@@ -1,0 +1,29 @@
+services:
+
+  postgres:
+    image: postgres:16
+    container_name: devburger_postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: dev-burger-db
+    ports:
+      - "5433:5432"
+    volumes:
+      - devburger_pgdata:/var/lib/postgresql/data
+
+  mongodb:
+    image: mongo:7
+    container_name: devburger_mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: 123456
+    ports:
+      - "27018:27017"
+    volumes:
+      - devburger_mongodata:/data/db
+
+volumes:
+  devburger_pgdata:
+  devburger_mongodata:
+
